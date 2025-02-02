@@ -33,7 +33,7 @@ public class SimCard {
     @Override
     public String toString() {
         return String.format(
-                "SimCard[id=%d, iccid=\"%s\", customerEmail=\"%s\", active=%b]",
+                "SimCard {id=%d, iccid=\"%s\", customerEmail=\"%s\", active=%b}",
                 this.id, this.iccid, this.customerEmail, this.active
         );
     }

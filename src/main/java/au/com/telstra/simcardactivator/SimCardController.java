@@ -32,7 +32,7 @@ public class SimCardController {
     public ResponseEntity<SimCard> query(@RequestParam long id) {
         Optional<SimCard> simCard = repository.findById(id);
         return simCard.map(
-                card -> ResponseEntity.ok().body(card)
+                ResponseEntity::ok
         ).orElseGet(
                 () -> ResponseEntity.notFound().build()
         );
