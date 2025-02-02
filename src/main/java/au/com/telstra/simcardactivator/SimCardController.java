@@ -3,7 +3,6 @@ package au.com.telstra.simcardactivator;
 import au.com.telstra.simcardactivator.model.ActivateRequest;
 import au.com.telstra.simcardactivator.model.SimCard;
 import au.com.telstra.simcardactivator.repository.SimCardRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,8 +18,6 @@ import java.util.Optional;
 @RestController
 public class SimCardController {
     private final String actuateUrl;
-
-    @Autowired
     private final SimCardRepository repository;
 
     public SimCardController(SimCardRepository repository) {
